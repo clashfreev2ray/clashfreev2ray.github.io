@@ -1,0 +1,211 @@
+@keyframes rotateScale {
+	from {
+		transform: rotate(0deg) scale(1);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes rotateScale {
+	from {
+		transform: rotate(0deg) scale(1);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@-moz-keyframes rotateScale {
+	from {
+		transform: rotate(0deg) scale(1);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@-o-keyframes rotateScale {
+	from {
+		transform: rotate(0deg) scale(1);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes infiUpDown {
+	0% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+
+	50% {
+		-webkit-transform: translateY(-25px);
+		transform: translateY(-25px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
+
+@-webkit-keyframes infiUpDown {
+	0% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+
+	50% {
+		-webkit-transform: translateY(-25px);
+		transform: translateY(-25px);
+	}
+
+	100% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
+
+.animate-object1 {
+	position: relative;
+	overflow: hidden;
+}
+.animate-object1:after {
+	background: url(/assets/website/img/clashfreev2ray/gear.png) center center no-repeat;
+	position: absolute;
+	content: "";
+	bottom: 60px;
+	right: 110px;
+	width: 240px;
+	height: 240px;
+	background-size: cover;
+	animation-name: rotateScale;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 40s;
+	opacity: 0.08;
+	z-index: -1;
+}
+
+/* twinRotate animation */
+.twinRotate {
+	-webkit-animation-name: twinRotate;
+	animation-name: twinRotate;
+	-webkit-animation-duration: 30s;
+	animation-duration: 30s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+@keyframes twinRotate {
+	from {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes twinRotate {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+/* heartbeat animation */
+.infiUpDown {
+	animation: infiUpDown 1s infinite alternate;
+}
+.heartbeat {
+	animation: heartbeat 1s infinite alternate;
+}
+
+@-webkit-keyframes heartbeat {
+	to {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+}
+
+/* leftright animation */
+.leftright {
+	animation: leftright 1s infinite alternate;
+}
+
+@-webkit-keyframes leftright {
+	0% {
+		-webkit-transform: translateX(-10px);
+		-moz-transform: translateX(-10px);
+		-ms-transform: translateX(-10px);
+		-o-transform: translateX(-10px);
+		transform: translateX(-10px);
+	}
+
+	100% {
+		-webkit-transform: translateX(40px);
+		-moz-transform: translateX(40px);
+		-ms-transform: translateX(40px);
+		-o-transform: translateX(40px);
+		transform: translateX(40px);
+	}
+}
+@keyframes rotateInfinit {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(45deg);
+	}
+
+	50% {
+		transform: rotate(90deg);
+	}
+
+	75% {
+		transform: rotate(135deg);
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}
+@keyframes spinInfinit {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}
+
+@-webkit-keyframes ZoomEffect {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(1.4, 1.4);
+		-ms-transform: scale(1.4, 1.4);
+		transform: scale(1.4, 1.4);
+	}
+}
+
+@keyframes ZoomEffect {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(1.4, 1.4);
+		-ms-transform: scale(1.4, 1.4);
+		transform: scale(1.4, 1.4);
+	}
+}
