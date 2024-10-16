@@ -1,4 +1,4 @@
-# 10月15日→20.8M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址  更新时间 2024-10-15 07:11:54
+# 10月16日→19.8M/S|2024年最新免费节点Shadowrocket/Clash/SSR/V2ray订阅链接地址  更新时间 2024-10-16 09:27:15
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashfreev2ray.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,19 +9,19 @@
 
 ### Clash订阅链接
 
-- https://clashfreev2ray.github.io/uploads/2024/10/0-20241015.yaml
-- https://clashfreev2ray.github.io/uploads/2024/10/1-20241015.yaml
-- https://clashfreev2ray.github.io/uploads/2024/10/2-20241015.yaml
-- https://clashfreev2ray.github.io/uploads/2024/10/3-20241015.yaml
-- https://clashfreev2ray.github.io/uploads/2024/10/4-20241015.yml
+- https://clashfreev2ray.github.io/uploads/2024/10/0-20241016.yaml
+- https://clashfreev2ray.github.io/uploads/2024/10/1-20241016.yaml
+- https://clashfreev2ray.github.io/uploads/2024/10/2-20241016.yaml
+- https://clashfreev2ray.github.io/uploads/2024/10/3-20241016.yaml
+- https://clashfreev2ray.github.io/uploads/2024/10/4-20241016.yml
 
 ### V2ray订阅链接
 
-- https://clashfreev2ray.github.io/uploads/2024/10/0-20241015.txt
-- https://clashfreev2ray.github.io/uploads/2024/10/1-20241015.txt
-- https://clashfreev2ray.github.io/uploads/2024/10/2-20241015.txt
-- https://clashfreev2ray.github.io/uploads/2024/10/3-20241015.txt
-- https://clashfreev2ray.github.io/uploads/2024/10/4-20241015.txt
+- https://clashfreev2ray.github.io/uploads/2024/10/0-20241016.txt
+- https://clashfreev2ray.github.io/uploads/2024/10/1-20241016.txt
+- https://clashfreev2ray.github.io/uploads/2024/10/2-20241016.txt
+- https://clashfreev2ray.github.io/uploads/2024/10/3-20241016.txt
+- https://clashfreev2ray.github.io/uploads/2024/10/4-20241016.txt
 
 ## 更多clash节点订阅 ：
 
