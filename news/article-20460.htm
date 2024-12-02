@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashfreev2ray.github.io/news/article-20460.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Java-Day05 函数、函数重载、递归函数</title>
+        <meta name="description" content="目录 1. 函数（function） 1.1 什么是函数 1.2 为什么使用函数 1.3 Java中如何定义函数 1.4 函数调用 1.5 函数的分类 1.6 局部变量 1.7 函数调用的本质 2. " />
+        <link rel="icon" href="__ADDON__/img/clashfreev2ray/favicon.ico" type="image/x-icon"/>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/clashfreev2ray/style.css">
+    <link rel="stylesheet" href="/assets/website/css/clashfreev2ray/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B3346M3F5B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B3346M3F5B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>Clash Free V2ray</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">Java-Day05 函数、函数重载、递归函数</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                      				  				  				<div id="content_views" class="htmledit_views"> <p id="main-toc"><strong>目录</strong></p> <p id="1.%20%E5%87%BD%E6%95%B0%EF%BC%88function%EF%BC%89-toc" style="margin-left:0px;"><a href="#1.%20%E5%87%BD%E6%95%B0%EF%BC%88function%EF%BC%89" rel="nofollow">1. 函数（function）</a></p> <p id="1.1%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%BD%E6%95%B0-toc" style="margin-left:40px;"><a href="#1.1%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%BD%E6%95%B0" rel="nofollow">1.1 什么是函数</a></p> <p id="1.2%20%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0-toc" style="margin-left:40px;"><a href="#1.2%20%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0" rel="nofollow">1.2 为什么使用函数</a></p> <p id="1.3%20Java%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0-toc" style="margin-left:40px;"><a href="#1.3%20Java%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0" rel="nofollow">1.3 Java中如何定义函数</a></p> <p id="1.4%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8-toc" style="margin-left:40px;"><a href="#1.4%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8" rel="nofollow">1.4 函数调用</a></p> <p id="1.5%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E7%B1%BB-toc" style="margin-left:40px;"><a href="#1.5%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E7%B1%BB" rel="nofollow">1.5 函数的分类</a></p> <p id="1.6%20%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F-toc" style="margin-left:40px;"><a href="#1.6%20%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F" rel="nofollow">1.6 局部变量</a></p> <p id="1.7%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E7%9A%84%E6%9C%AC%E8%B4%A8-toc" style="margin-left:40px;"><a href="#1.7%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E7%9A%84%E6%9C%AC%E8%B4%A8" rel="nofollow">1.7 函数调用的本质</a></p> <p id="2.%20%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD-toc" style="margin-left:0px;"><a href="#2.%20%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD" rel="nofollow">2. 函数重载</a></p> <p id="3.%20%E5%87%BD%E6%95%B0%E7%9A%84%E9%80%92%E5%BD%92(recursion)%EF%BC%9A-toc" style="margin-left:0px;"><a href="#3.%20%E5%87%BD%E6%95%B0%E7%9A%84%E9%80%92%E5%BD%92%28recursion%29%EF%BC%9A" rel="nofollow">3. 函数的递归(recursion)：</a></p> <p id="%E4%BE%8B%E9%A2%981%EF%BC%9A%E6%B1%821-100%E4%B9%8B%E9%97%B4%E6%89%80%E6%9C%89%E7%9A%84%E6%95%B0%E4%B9%8B%E5%92%8C-toc" style="margin-left:40px;"><a href="#%E4%BE%8B%E9%A2%981%EF%BC%9A%E6%B1%821-100%E4%B9%8B%E9%97%B4%E6%89%80%E6%9C%89%E7%9A%84%E6%95%B0%E4%B9%8B%E5%92%8C" rel="nofollow">例题1：求1-100之间所有的数之和</a></p> <p id="%E4%BE%8B%E9%A2%982%EF%BC%9A%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%EF%BC%8C%E6%89%93%E5%8D%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E6%9F%90%E4%B8%80%E9%A1%B9%E7%9A%84%E5%80%BC-toc" style="margin-left:40px;"><a href="#%E4%BE%8B%E9%A2%982%EF%BC%9A%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%EF%BC%8C%E6%89%93%E5%8D%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E6%9F%90%E4%B8%80%E9%A1%B9%E7%9A%84%E5%80%BC" rel="nofollow">例题2：编写一个程序，打印斐波那契数列某一项的值</a></p> <hr id="hr-toc"/> </h1> <h2 id="1.1%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%BD%E6%95%B0">1.1 什么是函数</h2> <p>函数就是定义在类中的具有特定功能的一段独立小程序，并能被多次使用。具有名称的特定功能代码的集合。</p> <h2 id="1.2%20%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0">1.2 为什么使用函数</h2> <p>提高代码的复用性，减少代码的维护成本。</p> <h2 id="1.3%20Java%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0">1.3 Java中如何定义函数</h2> <pre><code class="language-java">权限修饰符 [函数类型修饰符] 返回值类型 函数名([参数类型 形式参数1, 参数类型 形式参数2, ...]){     执行语句;     [return 返回值;] }</code></pre> <p>注意：在Java中，函数是定义在类中，是类的成员</p> <ol> <li><span style="color:#494949;">权限修饰符：指的就是函数的使用范围(内部和外部)</span></li> <li><span style="color:#494949;">函数类型：指的就是函数类型分类，说的就是函数的具体使用场景和场合</span></li> <li><span style="color:#494949;">函数名：就是程序员给这一段代码自定义的名称(标识符)</span></li> <li><span style="color:#494949;">参数列表：参数列表有若干个 参数类型,参数名... 组成主要用于接收外界传递给函数的一些数据</span></li> <li><span style="color:#494949;">函数体：就是那些具有独立功能的代码块</span></li> <li><span style="color:#494949;">return：仅仅表示结束当前函数，如果有返回值，则函数结束前将返回值返回给调用者</span></li> <li><span style="color:#494949;">返回值：指的就是这一具有独立功能的代码块的计算结果，需要传递给外界 配合return</span></li> <li><span style="color:#494949;">返回值类型：就是返回值的数据类型(可兼容)</span></li> </ol> <h2 id="1.4%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8">1.4 函数调用</h2> <p>当函数定义完成后，不会自己执行，需要通过调用来执行</p> <p>函数名称([实际参数列表])</p> <p>如下实现了一个打印Hello的函数：</p> <pre><code class="language-java">public class Function {     public static void main(String[] args) {         // 调用函数         printHello();     }      // 定义一个函数     // static 关键字的作用是将函数提前加载到内存中     public static void printHello() {         System.out.println("Hello");     } }</code></pre> <h2 id="1.5%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E7%B1%BB">1.5 函数的分类</h2> <p>1. 通过函数是否存在参数</p> <ul> <li>无参函数</li> <li>有参函数</li> </ul> <p>2. 函数是是否需要返回计算结果</p> <ul> <li>无返回值</li> <li>有返回值</li> </ul> <h2 id="1.6%20%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><strong>1.6 局部变量</strong></h2> <p>定义在函数内部的变量，叫做局部变量，局部变量的作用域只在当前函数中有效</p> <p>注意：在Java中没有全局变量，main函数中的变量也是局部变量，只是比较特殊</p> <p>作用域还是main函数本身，但是声明周期是比较长</p> <pre><code class="language-java">public class Function {     public static void main(String[] args) {         // 调用函数         printHello();         System.out.println(a); // 错误: 找不到符号     }      // 定义一个函数     // static 关键字的作用是将函数提前加载到内存中     public static void printHello() {         int a = 10;         System.out.println("Hello");     } }</code></pre> <p>在上述的代码中，函数printHello()中的变量就是局部变量。当在主函数中调用时，会报错。</p> <h2 id="1.7%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E7%9A%84%E6%9C%AC%E8%B4%A8">1.7 函数调用的本质</h2> <p>函数本质是一个对象，存储在对中，当调用时，会临时的压入栈中(push)，等调用完成后，函数被弹出栈(pop)。所以函数调用就是瞬时操作。</p> <p>调用函数 ==&gt; 函数压栈 ==&gt; 函数调用完 ==&gt; 函数出栈</p> <p>函数的运行原理：</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每当调用一个方法时，系统会创建一个活动记录（也称为活动框架），用于保存方法中的参数和变 量。活动记录置于一个内存去榆中，称为调用堆栈（call stack）。调用堆栈也称为执行堆栈、运行时堆 栈，或者一个机器堆栈，常简称为“堆栈”。当一个方法调用另一个方法时，调用者的活动记录保持不 动，一个新的活动记录被创建用于被调用的新方法。一个方法结束返回到调用者时，其相应的活动记录也被释放。</p> </h1> <p>函数重载(overload)：至少两个或者更多函数，函数名称相同，但是参数的个数或者类型不同，从而在调用的时候，可以通过传参确定要调用的函数</p> <pre><code class="language-java">public class OverLoadTest {     public static void main(String[] args) {         System.out.println(add(10, 20)); // 30         byte a = 10;         System.out.println(add(a, 10)); // 20         System.out.println(add(10)); // 110     }          public static int add(int x, int y) {         return x + y;     }      // 错误: 已在类 OverLoadTest中定义了方法 add(int,int)     // public static int add(int a, int b) {     //     return a + b;     // }      public static int add(byte a, int b) {         return a + b;     }      public static int add(int a) {         return a + 100;     }  }</code></pre> <p>函数重载，本质是对功能的扩展，不是代码的复用！！！</p> </h1> <p>递归：函数自身调用自身</p> <p>如果要使用递归：必须有终止条件，没有终止条件的递归就是一个死循环！！</p> <h2 id="%E4%BE%8B%E9%A2%981%EF%BC%9A%E6%B1%821-100%E4%B9%8B%E9%97%B4%E6%89%80%E6%9C%89%E7%9A%84%E6%95%B0%E4%B9%8B%E5%92%8C">例题1：求1-100之间所有的数之和</h2> <pre><code class="language-java">public class RecursionTest {     public static void main(String[] args) {         int s = sum(100);         System.out.println(s); // 5050          int n = sum1(100);         System.out.println(s); // 5050     }      public static int sum(int n) {         return n * (1 + n) / 2; // 等差数列     }      public static int sum1(int n) {         return n + sum(n - 1);  // 递归     } }</code></pre> <p>除次之外，我们还可以使用for循环去实现。</p> <p>再如，</p> <h2 id="%E4%BE%8B%E9%A2%982%EF%BC%9A%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%EF%BC%8C%E6%89%93%E5%8D%B0%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E6%9F%90%E4%B8%80%E9%A1%B9%E7%9A%84%E5%80%BC">例题2：编写一个程序，打印斐波那契数列某一项的值</h2> <pre><code class="language-java">import java.util.Scanner;  public class RecursionTest1 {     // 输入一个数n，输出斐波那契数列的第n项值      public static void main(String[] args) {         Scanner scan = new Scanner(System.in);         System.out.print("请输入项数：");         int n = scan.nextInt();          int result = fibonacci(n);         System.out.println(result);          fibonacci1(n);     }      public static int fibonacci(int n) {         if (n == 0) {             return 0;         }         if (n == 1) {             return 1;         }         return fibonacci(n - 1) + fibonacci(n - 2);     }      public static void fibonacci1(int n) {         int frist = 0;         int second = 1;         int three = 0;         for (int i = 2; i &lt;= n; i++) {             three = frist + second;             frist = second;             second = three;         }         System.out.println(three);     } }</code></pre> <p>函数fibonacci是一个递归函数，而fibonacci1函数是一个使用for循环去实现这个题目的方法。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-20001.htm">中国最大宠物食品公司（中国最大宠物食品公司在哪里）</a></p>
+                                        <p>下一个：<a href="/news/article-20461.htm">猫最忌讳的三个属相（有些人命里不能养猫）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-11-2-free-node-subscribe-links.htm" title="11月2日→19.9M/S|2024年最新免费节点Clash/V2ray/Shadowrocket/SSR订阅链接地址">11月2日→19.9M/S|2024年最新免费节点Clash/V2ray/Shadowrocket/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-9-clash-meta-windows.htm" title="9月9日→18.3M/S|2024年最新免费节点Shadowrocket/V2ray/Clash/SSR订阅链接地址">9月9日→18.3M/S|2024年最新免费节点Shadowrocket/V2ray/Clash/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-19-clash-node.htm" title="10月19日→19.8M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址">10月19日→19.8M/S|2024年最新免费节点SSR/Clash/V2ray/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-29-free-node-subscribe-links.htm" title="11月29日→21M/S|2024年最新免费节点V2ray/Clash/Shadowrocket/SSR订阅链接地址">11月29日→21M/S|2024年最新免费节点V2ray/Clash/Shadowrocket/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-1-free-node-subscribe.htm" title="12月1日→20M/S|2024年最新免费节点Clash/SSR/Shadowrocket/V2ray订阅链接地址">12月1日→20M/S|2024年最新免费节点Clash/SSR/Shadowrocket/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-10-free-node-subscribe-links.htm" title="10月10日→22.4M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址">10月10日→22.4M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-20461.htm" title="猫最忌讳的三个属相（有些人命里不能养猫）">猫最忌讳的三个属相（有些人命里不能养猫）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-15-free-high-speed-nodes.htm" title="11月15日→22.7M/S|2024年最新免费节点Shadowrocket/V2ray/Clash/SSR订阅链接地址">11月15日→22.7M/S|2024年最新免费节点Shadowrocket/V2ray/Clash/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-8-node-share-links.htm" title="11月8日→21.2M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址">11月8日→21.2M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-2-clash-node-github.htm" title="10月2日→22.3M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址">10月2日→22.3M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">32</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <span class="text-light-gray">
+                                Clash Free V2ray节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/clashfreev2ray/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
