@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashfreev2ray.github.io/news/article-28316.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>java集成pdf.js实现pdf文件在线预览</title>
+        <meta name="description" content="最近项目需要实现在线预览pdf文件功能，找来找去，发现有个pdf.js的类库挺好用，直接用js实现在线预览。 pdf.js是开源项目，github的地址：https://github.com/mozi" />
+        <link rel="icon" href="/assets/website/img/clashfreev2ray/favicon.ico" type="image/x-icon"/>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/clashfreev2ray/style.css">
+    <link rel="stylesheet" href="/assets/website/css/clashfreev2ray/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B3346M3F5B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B3346M3F5B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>Clash Free V2ray</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">java集成pdf.js实现pdf文件在线预览</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <p>最近项目需要实现在线预览pdf文件功能，找来找去，发现有个pdf.js的类库挺好用，直接用js实现在线预览。<br /> pdf.js是开源项目，<strong>github</strong>的地址：<br /><strong>https://github.com/mozilla/pdf.js</strong><br /> 根据教程指引，有以下几个步骤：</p> <ul> <li>clone源码到本地，如果是linux的话很方便，windows的话要另外下载git工具；<br /><strong>git地址</strong>：https://git-for-windows.github.io/<br /> 下载按默认安装方式就行，然后在开始菜单找到git打开git cmd就可以clone源码，当然，也可以直接download源码，不过国内的下载的速度实在是太慢了，可以更改hosts文件加快下载，在hosts文件添加：</li> </ul> <pre><code>185.31.16.184 github.global.ssl.fastly.net </code></pre> <p><strong>PS</strong>：其实我们使用pdf.js，只需要构建后的内容，大家可以到我的百度云盘下载：http://pan.baidu.com/s/1bDK8Zs ，下载后复制generic到tomcat的webapps下，这样访问 <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://localhost:8080/web/viewer.html"  rel="nofollow">http://localhost:8080/web/viewer.html</a> 能看到demo效果，跳过以下步骤，直接到项目集成。</p> <ul> <li>clone好源码后使用nodejs的包管理工具npm安装gulp构建工具，如下：</li> </ul> <pre><code>npm install -g gulp-cli </code></pre> <p>安装好gulp之后在源代码使用npm安装模块：</p> <pre><code>npm install </code></pre> <p>安装好模块后使用gulp构建本地web服务器：</p> <pre><code>gulp server </code></pre> <p>效果如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230211/1c379003a51ead4878500baf4050b158.jpg" alt="java集成pdf.js实现pdf文件在线预览"><br /> 接着访问 http://localhost:8888/web/viewer.html 就能看到效果：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230211/84561b65c226fa81128aee81482663f3.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>接下来使用gulp构建pdf.js，如下：</p> <pre><code>gulp generic </code></pre> <p>构建完成后项目目录下生成build文件夹：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230211/b093f23b2b107d630013137a37d0c5f3.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>generic/web/viewer.html渲染pdf阅读器页面，而generic/web/viewer.js则是打开指定的pdf文件，打开viewer.js<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230211/fa42422476971e464c61ff52912e07cc.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>可以看到，默认打开的是generic/web/compressed.tracemonkey-pldi-09.pdf文件，再来看下面这段代码：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230211/d49370f5ebbff44b4272c0508bcd1e0a.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>这样，我们就可以使用传递file形参来动态指定打开的pdf文件，如：</p> <pre><code>http://localhost:8080/generic/web/viewer.html?file=file.pdf </code></pre> <ul> <li>接着把项目集成到web项目中， 把generic作为插件使用，目录结构如下：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230211/22ec3ab3421b8de2af0b7913b71d6fb0.jpg" alt="java集成pdf.js实现pdf文件在线预览"> </li> </ul> <p>先写一个简单的jsp页面，使用iframe标签来加载pdf：</p> <pre><code>&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %&gt; &lt;%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %&gt; &lt;html&gt; &lt;head&gt;     &lt;title&gt;Title&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;iframe src="&lt;c:url value="/res/pdf/web/viewer.html" /&gt;?file=/displayPDF.do"         width="100%" height="800"&gt;&lt;/iframe&gt;  &lt;/body&gt; &lt;/html&gt; </code></pre> <p>接着写个controller读取pdf文件并返回：</p> <pre><code>import org.apache.commons.io.IOUtils; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.RequestMapping;  import javax.servlet.http.HttpServletResponse; import java.io.File; import java.io.FileInputStream; import java.io.OutputStream;  /**  * 在线预览pdf  * @Auothor wzx  * @Date 2016/12/18 0018  */ @Controller public class DisplayPDFController {      @RequestMapping("/displayPDF.do")     public void displayPDF(HttpServletResponse response) {         try {             File file = new File("F:/资料/pdf/JVM基础.pdf");             FileInputStream fileInputStream = new FileInputStream(file);             response.setHeader("Content-Disposition", "attachment;fileName=test.pdf");             response.setContentType("multipart/form-data");             OutputStream outputStream = response.getOutputStream();             IOUtils.write(IOUtils.toByteArray(fileInputStream), outputStream);         } catch(Exception e) {             e.printStackTrace();         }     } } </code></pre> <p>运行，在浏览器访问以下地址：</p> <pre><code>http://localhost:8080/res/pdf.jsp </code></pre> <p>效果如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230211/ba0a16ac132c51779a01872368385411.jpg" alt="java集成pdf.js实现pdf文件在线预览"></p> <p>本质是访问generic/web/viewer.html，通过指定的file形参打开指定pdf文件。</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://url.cn/QPlTOdTu"  rel="nofollow"><img decoding="async" src="http://img.555519.xyz/uploads/20230211/e9d51070a8a7bc5103d9e067c504a6cb.jpg" alt="java集成pdf.js实现pdf文件在线预览"></a></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-28315.htm">Java中定义和声明之间的区别。</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-11-14-free-node-subscribe-links.htm" title="11月14日→18.7M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址">11月14日→18.7M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-7-free-high-speed-nodes.htm" title="11月7日→19.9M/S|2024年最新免费节点V2ray/SSR/Shadowrocket/Clash订阅链接地址">11月7日→19.9M/S|2024年最新免费节点V2ray/SSR/Shadowrocket/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-25-free-subscribe-node.htm" title="9月25日→21.8M/S|2024年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址">9月25日→21.8M/S|2024年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-21-free-clash.htm" title="11月21日→21.1M/S|2024年最新免费节点Clash/SSR/V2ray/Shadowrocket订阅链接地址">11月21日→21.1M/S|2024年最新免费节点Clash/SSR/V2ray/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-19-free-high-speed-nodes.htm" title="12月19日→21.5M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址">12月19日→21.5M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-12-free-high-speed-nodes.htm" title="9月12日→20M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址">9月12日→20M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-2-clash-node-github.htm" title="10月2日→22.3M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址">10月2日→22.3M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-16-free-clash-subscribe.htm" title="9月16日→19.3M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址">9月16日→19.3M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-4-free-clash-stash.htm" title="10月4日→18.1M/S|2024年最新免费节点SSR/Clash/Shadowrocket/V2ray订阅链接地址">10月4日→18.1M/S|2024年最新免费节点SSR/Clash/Shadowrocket/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-24136.htm" title="动物防疫疫苗种类有哪些（动物防疫疫苗种类有哪些名称）">动物防疫疫苗种类有哪些（动物防疫疫苗种类有哪些名称）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">32</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                Clash Free V2ray节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/clashfreev2ray/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
