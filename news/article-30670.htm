@@ -2,13 +2,12 @@
 <html lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://clashfreev2ray.github.io" />
+        <link rel="canonical" href="https://clashfreev2ray.github.io/news/article-30670.htm" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>2024-10归档 - 第3页 - Clash Free V2ray节点订阅官网</title>
-        <meta name="keywords" content="2024-10归档Clash Free V2ray节点订阅官网" />
-        <meta name="description" content="2024-10归档，当前是第3页" />
+    <title>springboot的定时任务</title>
+        <meta name="description" content="springboot的定时任务可以通过注解的方式快速开启 基于注解@Scheduled默认为单线程，开启多个任务时，任务的执行时机会受上一个任务执行时间的影响。 1、创建定时器 使用SpringBoo" />
         <link rel="icon" href="/assets/website/img/clashfreev2ray/favicon.ico" type="image/x-icon"/>
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="/assets/website/css/clashfreev2ray/style.css">
@@ -26,7 +25,7 @@
      crossorigin="anonymous"></script>
 </head>
 
-<body data-page="category">
+<body data-page="detail">
         <!-- Preloader Start -->
     <div class="preloader"></div>
     <!-- Preloader End -->
@@ -73,11 +72,12 @@
             <div class="row">
                 <div class="col-xl-12 text-center">
                     <div class="page-title-content">
-                        <h1 class="title text-white">2024-10 归档</h1>
+                        <h1 class="title text-white">springboot的定时任务</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/">首页</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">2024-10 归档</li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
                             </ol>
                         </nav>
                     </div>
@@ -91,23 +91,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="xcblog-blog-list">
-                                                <div class="row item xcblog-blog-item" data-date="2024-10-01">
-                            <div class="col-md-3">
-                                <a href="/free-nodes/2024-10-1-free-node-subscribe-links.htm" class="xcblog-blog-url">
-                                    <img src="/uploads/20240904-1/522e99c526594039a42095c20b8f387b.webp" class="img-fluid" alt="10月1日→18.1M/S|2024年最新免费节点V2ray/SSR/Shadowrocket/Clash订阅链接地址">
-                                </a>
-                            </div>
-                            <div class="col-md-9">
-                                <a href="/free-nodes/2024-10-1-free-node-subscribe-links.htm" class="xcblog-blog-url">
-                                    <h3 class="xcblog-blog-title">10月1日→18.1M/S|2024年最新免费节点V2ray/SSR/Shadowrocket/Clash订阅链接地址</h3>
-                                </a>
-                                <p class="mrb-40">这一次的节点更新覆盖了日本、欧洲、香港、美国、韩国、新加坡、加拿大等地区,最高速度可达18.1 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                            </div>
-                        </div>
-                        
-                        <ul class="pagination"><li><a href="/date/2024-10/page-3.htm">&laquo;</a></li> <li><a href="/date/2024-10/">1</a></li><li><a href="/date/2024-10/page-2.htm">2</a></li><li><a href="/date/2024-10/page-3.htm">3</a></li><li class="active"><span>4</span></li> <li class="disabled"><span>&raquo;</span></li></ul>                    </div>
-                </div>
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>springboot的定时任务可以通过注解的方式快速开启</p> <p>基于注解@Scheduled默认为单线程，开启多个任务时，任务的执行时机会受上一个任务执行时间的影响。</p> <p>1、创建定时器</p> <p>使用SpringBoot基于注解来创建定时任务非常简单，只需几行代码便可完成。&nbsp;代码如下：</p> <pre><code class="language-java">@Configuration      //1.主要用于标记配置类，兼备Component的效果。 @EnableScheduling   // 2.开启定时任务 public class SaticScheduleTask {     //3.添加定时任务     @Scheduled(cron = "0/5 * * * * ?")     //或直接指定时间间隔，例如：5秒     //@Scheduled(fixedRate=5000)     private void configureTasks() {         System.err.println("执行静态定时任务时间: " + LocalDateTime.now());     } }</code></pre> <p>Cron表达式参数分别表示：</p> <ul> <li>秒（0~59） 例如0/5表示每5秒</li> <li>分（0~59）</li> <li>时（0~23）</li> <li>日（0~31）的某天，需计算</li> <li>月（0~11）</li> <li>周几（ 可填1-7 或 SUN/MON/TUE/WED/THU/FRI/SAT）</li> </ul> <p>@Scheduled：除了支持灵活的参数表达式cron之外，还支持简单的延时操作，例如 fixedDelay ，fixedRate 填写相应的毫秒数即可。</p> <pre>// Cron表达式范例：  每隔5秒执行一次：*/5 * * * * ?  每隔1分钟执行一次：0 */1 * * * ?  每天23点执行一次：0 0 23 * * ?  每天凌晨1点执行一次：0 0 1 * * ?  每月1号凌晨1点执行一次：0 0 1 1 * ?  每月最后一天23点执行一次：0 0 23 L * ?  每周星期天凌晨1点实行一次：0 0 1 ? * L  在26分、29分、33分执行一次：0 26,29,33 * * * ?  每天的0点、13点、18点、21点都执行一次：0 0 0,13,18,21 * * ? </pre> <p>2、启动测试</p> <p>启动应用，可以看到控制台打印出如下信息：</p> <p><img decoding="async" alt="在这里插入图片描述" src="http://img.555519.xyz/uploads/20230109/39c6911287065fc0c73e9967cd062d4c.jpg">&nbsp;</p> <p>显然，使用@Scheduled 注解很方便，但缺点是当我们调整了执行周期的时候，需要重启应用才能生效</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-30197.htm">重庆宠物领养机构电话（重庆宠物领养机构电话号码）</a></p>
+                                        <p>下一个：<a href="/news/article-30671.htm">antd组件upload上传xlsx文件，并读取文件内容</a></p>
+                                    </div>
+                                </div>
                 <div class="col-md-3">
                     <div class="panel panel-default">
     <div class="panel-heading">
@@ -115,16 +105,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-28784.htm" title="JS小练习之实现一个计时器（开始，暂停，重置）">JS小练习之实现一个计时器（开始，暂停，重置）</a></li>
+                        <li class="py-2"><a href="/news/article-25061.htm" title="义乌免费领养猫咪的地方（义乌领养宠物猫吧）">义乌免费领养猫咪的地方（义乌领养宠物猫吧）</a></li>
+                        <li class="py-2"><a href="/news/article-24136.htm" title="动物防疫疫苗种类有哪些（动物防疫疫苗种类有哪些名称）">动物防疫疫苗种类有哪些（动物防疫疫苗种类有哪些名称）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-5-free-clash-stash.htm" title="12月5日→21.2M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址">12月5日→21.2M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-17-node-share.htm" title="12月17日→18.9M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址">12月17日→18.9M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19088.htm" title="中国农业大学动物医院地址在哪里啊（中国农业大学动物医院地址在哪里啊）">中国农业大学动物医院地址在哪里啊（中国农业大学动物医院地址在哪里啊）</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-10-10-free-node-subscribe-links.htm" title="10月10日→22.4M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址">10月10日→22.4M/S|2024年最新免费节点Shadowrocket/SSR/Clash/V2ray订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-23203.htm" title="动物疫苗研制过程图片（动物疫苗研究）">动物疫苗研制过程图片（动物疫苗研究）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-4-free-clash-stash.htm" title="10月4日→18.1M/S|2024年最新免费节点SSR/Clash/Shadowrocket/V2ray订阅链接地址">10月4日→18.1M/S|2024年最新免费节点SSR/Clash/Shadowrocket/V2ray订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-23204.htm" title="动物医院翻译英语 动物医院翻译英语怎么说">动物医院翻译英语 动物医院翻译英语怎么说</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-15-free-clash-stash.htm" title="10月15日→20.6M/S|2024年最新免费节点V2ray/Clash/SSR/Shadowrocket订阅链接地址">10月15日→20.6M/S|2024年最新免费节点V2ray/Clash/SSR/Shadowrocket订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-26002.htm" title="给动物医院的好评评语 给动物医院的好评评语怎么写">给动物医院的好评评语 给动物医院的好评评语怎么写</a></li>
-                        <li class="py-2"><a href="/news/article-20461.htm" title="猫最忌讳的三个属相（有些人命里不能养猫）">猫最忌讳的三个属相（有些人命里不能养猫）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-24-free-clash-stash.htm" title="12月24日→20.7M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址">12月24日→20.7M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-27-free-high-speed-nodes.htm" title="10月27日→19.1M/S|2024年最新免费节点Shadowrocket/Clash/SSR/V2ray订阅链接地址">10月27日→19.1M/S|2024年最新免费节点Shadowrocket/Clash/SSR/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-16-free-clash-subscribe.htm" title="9月16日→19.3M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址">9月16日→19.3M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-clash-meta-node-share.htm" title="11月9日→21.5M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址">11月9日→21.5M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-16-clash-node.htm" title="11月16日→21.7M/S|2024年最新免费节点Shadowrocket/Clash/V2ray/SSR订阅链接地址">11月16日→21.7M/S|2024年最新免费节点Shadowrocket/Clash/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-24601.htm" title="吉林猫咪寄养（吉林猫咪寄养收费标准）">吉林猫咪寄养（吉林猫咪寄养收费标准）</a></li>
                     </ul>
     </div>
 </div>
