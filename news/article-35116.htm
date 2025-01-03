@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashfreev2ray.github.io/news/article-35116.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>为vscode开发一款svn右键菜单扩展</title>
+        <meta name="description" content="在我平时的工作中会经常用到svn blame这个命令，但是vscode现有的svn扩展普遍都不能自定义右键菜单。 所以我产生一个想法：自己动手为vscode开发一款svn的扩展来定制右键菜单，本文记录" />
+        <link rel="icon" href="/assets/website/img/clashfreev2ray/favicon.ico" type="image/x-icon"/>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/clashfreev2ray/style.css">
+    <link rel="stylesheet" href="/assets/website/css/clashfreev2ray/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B3346M3F5B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B3346M3F5B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>Clash Free V2ray</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">为vscode开发一款svn右键菜单扩展</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>在我平时的工作中会经常用到svn blame这个命令，但是vscode现有的svn扩展普遍都不能自定义右键菜单。</p> <p>所以我产生一个想法：自己动手为vscode开发一款svn的扩展来定制右键菜单，本文记录这个svn扩展的开发记录，此扩展开发约耗时周末中的一天。</p> <blockquote> <p>最终成果：在vscode扩展中搜索：svnHelper就可以找到我编写的svn扩展，商店下载地址：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://marketplace.visualstudio.com/items?itemName=qingqingzhao.svnhelper"  target="_blank" rel="nofollow">https://marketplace.visualstudio.com/items?itemName=qingqingzhao.svnhelper</a></p> </blockquote> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/9bc32380dce67956393266bab0a12cc7.jpg" alt="为vscode开发一款svn右键菜单扩展"></p> <p></p> <h2 id="vscode的svn扩展源代码">vscode的svn扩展源代码</h2> <blockquote> <p>重点：这几个库拉下来之后，我尝试直接通过vsce package指令生成vsix，全部都失败了，编译代码时有不同的出错，只能去看vscode的开发文档。</p> </blockquote> <p>这里我列一下我找到的几个开源的vscode的tortoise svn 扩展，每个仓库的代码我大概扫了一下：</p> <p>如果想自己往右键菜单中添加选项，这个扩展的源代码比较简单易懂：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/florentulve/vstortoise"  target="_blank" rel="nofollow">https://github.com/florentulve/vstortoise</a></p> <p>这个可以提交整个workspace：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/fantacytyx/vscode-tortoise-svn"  target="_blank" rel="nofollow">https://github.com/fantacytyx/vscode-tortoise-svn</a></p> <p>这个提供很多的命令，<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/cdsama/tortoise-svn-for-vscode"  target="_blank" rel="nofollow">https://github.com/cdsama/tortoise-svn-for-vscode</a></p> <p></p> <h3 id="其它解决办法">其它解决办法</h3> <p>在时间急迫的情况下，我找到了这个神器，在vscode中可以打开系统右键菜单，这样也可以满足我的需求，只是它需要多点一下鼠标</p> <p>Windows Explorer Context Menu：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://marketplace.visualstudio.com/items?itemName=florentulve.vstortoise"  target="_blank" rel="nofollow">https://marketplace.visualstudio.com/items?itemName=florentulve.vstortoise</a></p> <p></p> <h3 id="github上源码报的错">github上源码报的错</h3> <p>上述几个源码库在编译时无一列外都会报错，我猜原因可能是我安装的nodejs和vscode版本太新有关系，因为这些库都是三四年前的。</p> <p>我的操作步骤是看vscode的官方文档来操作的，步骤如下：</p> <p>首先通过npm install来安装依赖，但会报：Cannot find module 'vscode'.</p> <p>然后npm install vscode 之后，再次编译就有一堆的 node.d.ts编译出错</p> <p>尝试过修改package.json中依赖库的版本之后，还是无法解决编译时的报错。</p> <blockquote> <p>结论：期间还出现可以调试，但打包为vsix就会有不一样的报错，最终我放弃了折腾上述几个库，自己重新开始一个项目开发。</p> </blockquote> <p></p> <h2 id="vscode扩展开发学习资料">vscode扩展开发学习资料</h2> <p>新建一个vscode的扩展项目：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://cntofu.com/book/98/md/%E6%89%A9%E5%B1%95/%E8%8C%83%E4%BE%8B-hello-world.md"  target="_blank" rel="nofollow">范例-hello-world-Microsoft Visual Studio Code 中文手册 (cntofu.com)</a></p> <p>推荐这个系列，有配图讲的很清晰：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://blog.haoji.me/vscode-plugin-package-json.html"  target="_blank" rel="nofollow">VSCode扩展开发全攻略（三）package.json详解-好记的博客 (haoji.me)</a></p> <p></p> <h3 id="微软的文档及例子">微软的文档及例子</h3> <p>微软的例子：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/microsoft/vscode-extension-samples"  target="_blank" rel="nofollow">https://github.com/microsoft/vscode-extension-samples</a></p> <p>微软VSCode扩展开发官方文档：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://code.visualstudio.com/docs/extensions/overview"  target="_blank" rel="nofollow">https://code.visualstudio.com/docs/extensions/overview</a></p> <p>生成vsix及发布到市场文档：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://code.visualstudio.com/api/working-with-extensions/publishing-extension"  target="_blank" rel="nofollow">https://code.visualstudio.com/api/working-with-extensions/publishing-extension</a></p> <h3 id="书籍">书籍</h3> <p>如果时间充实的同学，可以看看微软韩老师的这本书《Visual Studio Code 权威指南》，在第15章有讲到如何开发一个vscode扩展</p> <p></p> <h2 id="开发扩展的步骤">开发扩展的步骤</h2> <p>需要下载nodejs，用来编译及发布</p> <p>需要安装的库：</p> <blockquote> <p>用来生成新建项目的：npm install -g yo generator-code</p> </blockquote> <blockquote> <p>用来打包vsix的：npm i vsce -g</p> </blockquote> <p>开发扩展的步骤</p> <ol> <li>cd到你要把项目保存的路径，然后通过yo code新建一个项目，然后选项项目的开发语言，熟悉C#的可选TypeScript</li> <li>编写扩展代码</li> <li>按F5运行扩展，或者在运行调试这里，运行或新建调试项：Run Extension</li> <li>vsce package，把扩展打包为vsix文件</li> <li>vsce publish，把扩展发布到商店</li> </ol> <p></p> <h2 id="发布到vscode商店">发布到vscode商店</h2> <p>这个命令不能使用了：vsce create-publisher your-publisher-name</p> <p>需要到这个网站进行操作(提交的时候可能需要挂VPN)：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://aka.ms/vscode-create-publisher"  target="_blank" rel="nofollow">https://aka.ms/vscode-create-publisher</a></p> <h3 id="发布遇到问题">发布遇到问题</h3> <p>这个报错需要在package.json中把publisher的名字与申请的发布名字一致</p> <pre><code>ERROR  The Personal Access Token verification has failed. Additional information:  Error: Access Denied: e2d743d1-0ffd-4e04-a41d-c894878f29ba needs the following permission(s) on the resource /qingqingzhao to perform this action: View user permissions on a resource</code></pre> <h2 id="开发及发布的注意事项">开发及发布的注意事项</h2> <blockquote> <p>ps：开发过程中还遇到了其它的问题，可参考我的这篇文章《<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/zhaoqingqing/p/14823179.html"  target="_blank" rel="nofollow">知乎vscode插件修改和重新编译</a>》</p> </blockquote> <p>发布的注意事项如果repository有填则会检查github仓库？看到有篇文章中写道，因为我是放在gitee上的，所以我没填。</p> <p>建议往项目中添加这几个文件，否则每次打包时都会需要你二次确认</p> <p>LICENSE.txt</p> <p>CHANGELOG.md</p> <p>package.json中的name建议全小写，否则会有黄色警告线，每一项的意思如果不清晰的话，把鼠标移上去就会有提示这项是干啥的。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-34480.htm">公务员国考报名是什么时间（2021年公务员国考报名是什么时间）</a></p>
+                                        <p>下一个：<a href="/news/article-35117.htm">妙三多猫疫苗打完有什么不良反应（妙三多猫疫苗打两针还是三针）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-10-15-free-clash-stash.htm" title="10月15日→20.6M/S|2024年最新免费节点V2ray/Clash/SSR/Shadowrocket订阅链接地址">10月15日→20.6M/S|2024年最新免费节点V2ray/Clash/SSR/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-23203.htm" title="动物疫苗研制过程图片（动物疫苗研究）">动物疫苗研制过程图片（动物疫苗研究）</a></li>
+                        <li class="py-2"><a href="/news/article-32103.htm" title="融安旅游景点哪个好玩的地方推荐(融安旅游景点哪个好玩的地方推荐一下)">融安旅游景点哪个好玩的地方推荐(融安旅游景点哪个好玩的地方推荐一下)</a></li>
+                        <li class="py-2"><a href="/news/article-31129.htm" title="动物医院翻译英文（动物医院的英文单词）">动物医院翻译英文（动物医院的英文单词）</a></li>
+                        <li class="py-2"><a href="/news/article-31617.htm" title="开宠物店投资大吗（开宠物店很赚钱吗）">开宠物店投资大吗（开宠物店很赚钱吗）</a></li>
+                        <li class="py-2"><a href="/news/article-27387.htm" title="附近免费领养狗猫的地方在哪里（附近的领养宠物店）">附近免费领养狗猫的地方在哪里（附近的领养宠物店）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-8-node-share-links.htm" title="11月8日→21.2M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址">11月8日→21.2M/S|2024年最新免费节点SSR/V2ray/Clash/Shadowrocket订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-12-clash-node-github.htm" title="10月12日→20.4M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址">10月12日→20.4M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-11-node-share-links.htm" title="11月11日→19.2M/S|2024年最新免费节点V2ray/Shadowrocket/Clash/SSR订阅链接地址">11月11日→19.2M/S|2024年最新免费节点V2ray/Shadowrocket/Clash/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-6-node-share-links.htm" title="9月6日→20M/S|2024年最新免费节点V2ray/Clash/Shadowrocket/SSR订阅链接地址">9月6日→20M/S|2024年最新免费节点V2ray/Clash/Shadowrocket/SSR订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">32</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                Clash Free V2ray节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/clashfreev2ray/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
