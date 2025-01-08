@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashfreev2ray.github.io/news/article-37359.htm" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）</title>
+        <meta name="description" content="程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）时的六种解决方法 一.首先保证主配置文件是放在resources目录之下     二.看pom.x" />
+        <link rel="icon" href="/assets/website/img/clashfreev2ray/favicon.ico" type="image/x-icon"/>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/website/css/clashfreev2ray/style.css">
+    <link rel="stylesheet" href="/assets/website/css/clashfreev2ray/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B3346M3F5B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B3346M3F5B');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Preloader Start -->
+    <div class="preloader"></div>
+    <!-- Preloader End -->
+    <!-- header Start -->
+    <header class="header-style-two">
+        <div class="header-wrapper">
+            <div class="header-navigation-area two-layers-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                        <a class="navbar-brand logo f-left mrt-10 mrt-md-0" href="/">
+                                <span>Clash Free V2ray</span>
+                            </a>
+                                                        <div class="main-menu f-right">
+                                <nav id="mobile-menu-right">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/free-nodes/">免费节点</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header End -->
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center">
+                    <div class="page-title-content">
+                        <h1 class="title text-white">Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">首页</a></li>
+                                <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">正文</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- About Section Start -->
+    <section class="about-section anim-object pdt-110 pdb-50 pdb-lg-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2><a id="targetclassessqlsql_mapper_0" rel="nofollow"></a>程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）时的六种解决方法</h2> <p>一.首先保证主配置文件是放在resources目录之下</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220723/f91f3a5eb4b6d15ba466816bb696fd56.jpg" alt="Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）"></p> <ul> <li></li> </ul> <p>二.看pom.xml文件中是否有resources标签</p> <pre><code class="prism language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resources</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resource</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span><span class="token punctuation">&gt;</span></span>src/main/java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>directory</span><span class="token punctuation">&gt;</span></span><span class="token comment">&lt;!--所在的目录--&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>includes</span><span class="token punctuation">&gt;</span></span><span class="token comment">&lt;!--包括目录下的.properties,.xml 文件都会扫描到--&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span>**/*.properties<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>include</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span>**/*.xml<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>include</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>includes</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filtering</span><span class="token punctuation">&gt;</span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filtering</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>resource</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>resources</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">&gt;</span></span></code></pre> <ul> <li></li> </ul> <p>三.以上都有的情况下，仍然在classes目录下找不到文件时，<br /> 在maven操作下：点击clean----再点击compile，进行重新编译</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220723/b4d56fe72584fba50ed673d8e86e6587.jpg" alt="Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）"></p> <ul> <li></li> </ul> <p>四.点击Bulid----再点击Rebulid Project。强制重新编译该项目。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220723/e46d9579f7e8f73e7ec31024a4a6b9ce.jpg" alt="Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）"></p> <ul> <li></li> </ul> <p>五.清除idea之前的缓存再重启idea</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220723/c4c2bf381e61c23ec0be4f5d8f5bead8.jpg" alt="Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）"><br /> 然后再点击：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220723/fb05d81ee325dd65c40c740cd63d2102.jpg" alt="Mybatis学习之程序编译后在target/classes目录下找不到主配置文件或sql映射文件（sql mapper）"></p> <p><strong>在这里对这三个选项进行说明</strong>：</p> <ul> <li> <p><code>Clear file system cache and Local History</code>：<br /> 清除文件系统缓存和本地历史记录：删除虚拟文件系统缓存以及存储在本地历史记录中的信息</p> </li> <li> <p><code>Clear downloaded shared indexes</code>：<br /> 下载新的共享索引之前进行确认：显示通知，提示下载新的共享索引。</p> </li> <li> <p><code>Ask before downloading new shared indexes</code>：<br /> 删除下载的共享索引。</p> </li> </ul> <p>六.以上方法都无法解决时，可以直接手动复制主配置文件或sql映射文件到target/classes目录之下</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-36869.htm">猫咪没有注射疫苗可以绝育吗（猫咪没有打疫苗可以做绝育手术吗）</a></p>
+                                        <p>下一个：<a href="/news/article-37360.htm">厦门哪里可以领养宠物猫 厦门哪里可以领养宠物猫咪</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-10-22-free-clash-stash.htm" title="10月22日→22M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址">10月22日→22M/S|2024年最新免费节点Shadowrocket/V2ray/SSR/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-clash-meta-node-share.htm" title="11月9日→21.5M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址">11月9日→21.5M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-27-free-clash.htm" title="12月27日→20.4M/S|2024年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址">12月27日→20.4M/S|2024年最新免费节点SSR/Shadowrocket/Clash/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-7-clash-windows.htm" title="10月7日→21.1M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址">10月7日→21.1M/S|2024年最新免费节点Clash/Shadowrocket/V2ray/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-32574.htm" title="猫粮品牌推荐（猫粮品牌推荐大全）">猫粮品牌推荐（猫粮品牌推荐大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-8-free-subscribe-node.htm" title="12月8日→20.3M/S|2024年最新免费节点Clash/V2ray/Shadowrocket/SSR订阅链接地址">12月8日→20.3M/S|2024年最新免费节点Clash/V2ray/Shadowrocket/SSR订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-24-clash-node-github.htm" title="10月24日→18.1M/S|2024年最新免费节点SSR/V2ray/Shadowrocket/Clash订阅链接地址">10月24日→18.1M/S|2024年最新免费节点SSR/V2ray/Shadowrocket/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-20-free-clash-stash.htm" title="11月20日→19.7M/S|2024年最新免费节点Clash/SSR/Shadowrocket/V2ray订阅链接地址">11月20日→19.7M/S|2024年最新免费节点Clash/SSR/Shadowrocket/V2ray订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-19-node-share.htm" title="11月19日→18.7M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址">11月19日→18.7M/S|2024年最新免费节点Shadowrocket/SSR/V2ray/Clash订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-25532.htm" title="Python 树表查找_千树万树梨花开，忽如一夜春风来（二叉排序树、平衡二叉树）">Python 树表查找_千树万树梨花开，忽如一夜春风来（二叉排序树、平衡二叉树）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">32</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        <!-- Footer Area Start -->
+    <footer class="footer">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <span class="text-light-gray">
+                                Clash Free V2ray节点订阅官网 版权所有
+                                <br />
+                                Powered by WordPress
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- BACK TO TOP SECTION -->
+    <div class="back-to-top bg-gradient-color">
+        <i class="fab fa-angle-up"></i>
+    </div>
+    <!-- Integrated important scripts here -->
+    <script src="/assets/website/js/frontend/clashfreev2ray/jquery.v1.12.4.min.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/jquery-core-plugins.js"></script>
+    <script src="/assets/website/js/frontend/clashfreev2ray/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
